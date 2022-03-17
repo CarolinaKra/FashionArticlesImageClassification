@@ -50,17 +50,31 @@ The chosen evaluation protocol was "one hold-out" where we train with the traini
 ### Data exploration and data cleansing
 An already existing structured dataset of fashion articles data and its corresponding images was utilized in this project.
 The dataset containes information and images of 44424 articles. However, processing such an amount of images requires more than the available RAM in Colab, hence, I opted to work with a reduced dataset that contains a third of the original one. 
+
 The final dataframe contains information about 14808 articles, which are categorised in differnt ways, by gender, by masterCategory, by subCategory and more detailed categories such as article type, detail description of the products between others. By looking at the amount of distinct values for each column, I decided to work with gender, masterCategory and subCategory. 
+
 By exploring the distribution of the different classes for each category, I understood that there are many classes that are underrepresented, hence I decided to remove from the dataset, the classes that represented less than 1%.
 
 The final distributions for the different classes are shown bellow:
 
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/subClassdistribution.png)
 
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/masterClassdistribution.png)
 ![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/genderDistribution.png)
 
 
+### Image Processing
+I opened each image, converted into a 3d tensor, where two dimension represent the image size and the 3rd dimension represent the channels (the primary colors). I checked the tensor shape, and discard the images that did not have the correct shape, I scaled the values of the tensor to be between 0 and 1 and put all the images in a list. This list was then converted into a 4d tensor, where the first dimension corresponds to the number of samples.
 
+### Finalising data preparation for NN
+In this step:
+* I deleted the rows that corresponded to the wrong shape images 
+* I converted the labels into one-hot encoding tensors.
+* I split the data into train, validation and test sets
 
+## 5. Develope a model that does better than a baseline model
+* First, I created a baseline model using only fully-connected layers. This model achieved an average accuracy of 74.9%
+* Secondly, I created a  basic convolutional layer model with a single convolutional layer, a maxpooling layer, a flatten layer, a single dense layer in addition to the output layers for classification. This model improved the baseline model achieving an average accuracy of 91.6%.
 
 
 
