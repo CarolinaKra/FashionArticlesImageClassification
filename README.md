@@ -79,7 +79,7 @@ In this step:
 ## 6. Develope a model that overfits by scaling up
 I created a model as bellow
 
-model image
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/model.png)
 
 From the validation graphs, I could see that there is a high overfitting of the data, however, it reached higher validation accuracies than the simple CNN model.
 
@@ -94,7 +94,11 @@ As the number of filters for each layer will be different, I defined the hyperpa
 
 The results of the experimental training and validation looked as follow
 
-![]
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/experimentalResults.png)
+
+For each trial, I stored the minimum validation loss and the average validation accuracy at this point which I called maximum validation accuracy. From this, I could plot the following graph to understand better the influence of each hyperparameter in the learning process.
+
+![](
 
 
 
