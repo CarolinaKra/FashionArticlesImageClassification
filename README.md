@@ -98,7 +98,60 @@ The results of the experimental training and validation looked as follow
 
 For each trial, I stored the minimum validation loss and the average validation accuracy at this point which I called maximum validation accuracy. From this, I could plot the following graph to understand better the influence of each hyperparameter in the learning process.
 
-![](
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/boxplotloss.png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/boxplotacc%20(1).png)
+
+From these results, I understood that the hyperparameter that improves the training without affecting the overfitting is the patch size, which should be small, while for the other parameters, number of filters in the conv2d and number of nodes in the dense layer, it is best to have a combination of a high value in one and a low value in the other.
+
+The experiment which reached the minimum validation loss is the experiment with small local receptive fields, fewer filters per layer and 100 nodes in the dense layer so I continued working with these hyperparameters for the next step. 
+
+## Add Batch Normalisation
+In this step, I tried adding batch normalisation at different stages in the model. These were the results:
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/BNresults.png)
+
+The Batch normalisation didn't improve the model, I could see that the validation loss vs epochs plots for the trials with batch normalisation show much more oscilation without reducing the validation loss. Hence the best trial is the one obtained in the previous step without batch normalisation.
+
+## Add Dropout Regulariser
+I add a dropout layer before the dense layer after the flatten layer. For this experiment, I tried using three values of dropout rate and we compared them to the original model without dropout. In addition, I increased the number of epochs, as the dropout generally slows the learning down but it should reach lower validation losses and higher validation accuracies.
+
+The results looked as follows:
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/DOresults.png)
+
+The best dropout trial was the one which applied 0.5 dropout. It achieved the lowest minimum validation loss and the maximum average validation accuracy. Moreover, I could see that the minimum validation loss decreases as the Dropout rate increases.
+
+I used this dropout rate for the final model architecture. From the latest results, I looked for the optimal number of epochs which I used to train the final model.
+
+### Training the final model
+
+I joint the validation and training sets into a final training set, I used the optimal number of epochs to train it.
+
+## Final Results
+* **Gender Classification accuracy:** 89.4 %
+* **MasterCategory Classification accuracy:** 98.3%
+* **SubCategory Classification accuracy:**  94.7%
+* **Average Classification accuracy:** 94.1%
+
+#### Confusion Matrices
+The confusion matrices for each classification task looked as follows:
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/genderCM.png)
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/masterCatCM.png)
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/subCatCM.png)
+
+#### Test images examples
+
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct0.png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct1.png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct2.png)
+
+
+
+
+
 
 
 
