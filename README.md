@@ -29,8 +29,8 @@ I developed a computer vision model for multi-output classification of Fashion A
   3. Different number of nodes in the dense layer
   4. Addition of BatchNormalisation in the model at different positions
   5. Addition of Dropout layer with different values
-* The final model achieved an averaged accuracy of 96.2%, which includes a 99.2% accuracy for masterCategory, 97.3% for subCategory and 92.1% for gender.
-* The confusion matrices show that the model successfully classified all the different classes within masterCategory and subCategory but for the gender task classification, the model struggled to classify correctly the unisex articles.
+* The final model achieved an averaged accuracy of 94.1%, which includes a 98.3% accuracy for masterCategory, 94.7% for subCategory and 89.4% for gender.
+* The confusion matrices show that the model successfully classified all the different classes within masterCategory, almost all of them within subCategory but for the gender task classification, the model struggled to classify correctly the unisex articles and the girls articles which were the less represented.
 * Improvements of the model could be done by increasing the amount of images for unrepresented classes.
 
 
