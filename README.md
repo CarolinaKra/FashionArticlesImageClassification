@@ -47,11 +47,19 @@ The measure of success was the accuracy, it was calculated for each classificati
 The chosen evaluation protocol was "one hold-out" where we train with the training set and evaluate with the validation set once for every epoch.
 
 ## 4. Load and prepare the data
+### Data exploration and data cleansing
 An already existing structured dataset of fashion articles data and its corresponding images was utilized in this project.
-The distribution of the classes for the different categories are shown bellow:
-![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/distributionSubCategory.png)
-![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/distributionMasterCategory.png)
+The dataset containes information and images of 44424 articles. However, processing such an amount of images requires more than the available RAM in Colab, hence, I opted to work with a reduced dataset that contains a third of the original one. 
+The final dataframe contains information about 14808 articles, which are categorised in differnt ways, by gender, by masterCategory, by subCategory and more detailed categories such as article type, detail description of the products between others. By looking at the amount of distinct values for each column, I decided to work with gender, masterCategory and subCategory. 
+By exploring the distribution of the different classes for each category, I understood that there are many classes that are underrepresented, hence I decided to remove from the dataset, the classes that represented less than 1%.
+
+The final distributions for the different classes are shown bellow:
+
+
 ![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/genderDistribution.png)
+
+
+
 
 
 
