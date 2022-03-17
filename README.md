@@ -1,5 +1,5 @@
 # Multi-Label Classification of Fashion Articles Images
-I developed a computer vision model for multi-output classification of Fashion Article images reaching an average accuracy of 96.2%
+I developed a computer vision model for multi-output classification of Fashion Article images reaching an average accuracy of 94.1%
 
 ## Code and Resources
 * **Python version:** 3.7
@@ -49,6 +49,10 @@ The chosen evaluation protocol was "one hold-out" where we train with the traini
 ## 4. Load and prepare the data
 An already existing structured dataset of fashion articles data and its corresponding images was utilized in this project.
 The distribution of the classes for the different categories are shown bellow:
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/distributionSubCategory.png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/distributionMasterCategory.png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/genderDistribution.png)
+
 
 
 
