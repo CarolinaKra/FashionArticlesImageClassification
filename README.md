@@ -74,7 +74,27 @@ In this step:
 
 ## 5. Develope a model that does better than a baseline model
 * First, I created a baseline model using only fully-connected layers. This model achieved an average accuracy of 74.9%
-* Secondly, I created a  basic convolutional layer model with a single convolutional layer, a maxpooling layer, a flatten layer, a single dense layer in addition to the output layers for classification. This model improved the baseline model achieving an average accuracy of 91.6%.
+* Secondly, I created a  basic convolutional layer model with a single convolutional layer, a maxpooling layer, a flatten layer, a single dense layer in addition to the output layers for classification. This model improved the baseline model achieving an average accuracy of 91.6%. The reason for the success is that the CNN models are able to retain graphical patterns from the images, and do not assume that the object is in the same position for every image as the baseline model did.
+
+## 6. Develope a model that overfits by scaling up
+I created a model as bellow
+
+model image
+
+From the validation graphs, I could see that there is a high overfitting of the data, however, it reached higher validation accuracies than the simple CNN model.
+
+For the next step, I continued using this model architecture but I explored different hyperparamaters.
+
+## 7. Tune the hyperparameters, add regularisation and train and test the final model.
+
+### Hyperparameter tunning
+I created an experiment combining the different hyperparameters that I wanted to explore: local receptive field size, number of filters per layer and number of nodes in the dense layer.
+
+As the number of filters for each layer will be different, I defined the hyperparameter "filters_amount" as "few" or "many" which dictated the number of filters for each layer. Similarly, I used the hyperparameter for the local receptive field as "small" or "large" taking in account that for the initial layers, I could use larger patches than the ones in further up layers.
+
+The results of the experimental training and validation looked as follow
+
+![]
 
 
 
