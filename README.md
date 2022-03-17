@@ -143,16 +143,21 @@ The confusion matrices for each classification task looked as follows:
 ![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/subCatCM.png)
 
 #### Test images examples
+Examples of correctly classified images:
 
-![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct0.png)
-![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct1.png)
-![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct2.png)
-
-
-
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct0%20(1).png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct2%20(1).png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/correct3.png)
 
 
+Examples of incorrectly classified images for each classification task:
 
+![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/incorrectgender%20(1).png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/incorrectmaster%20(1).png)
+![alt text](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/incorrectsub%20(1).png)
+
+
+## Conclusions
 
 
 
