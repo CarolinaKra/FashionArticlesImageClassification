@@ -158,6 +158,15 @@ Examples of incorrectly classified images for each classification task:
 
 
 ## Conclusions
+* The average final model accuracy is 94.1%. This a is a really good success, given the initial baseline model accuracy of 74.9% and the simple CNN model accuracy of 91.6%.
+* The gender's confusion matrix showed the model predicted high percentages of womens, mens and boys articles however, it wasn't as good at prediting unisex articles or girls ones.
+* The masterCategory and subCategory confusion matrices showed that the model has done a great job classifying the fashion articles. Even thought there were less-represented classes, for most of them, the model achieved high accuracy. 
+* The example images above show again how successfull was the model on image classification, especially for the gender classification task of a boys and girls apparel which each of them represented less than 2% of the dataset. 
+* The model failed to classify a pair of sunglasses as unisex but I human could easily make the same mistake. 
+* The model has predicted a sock as a footwear, however this was considered a mistake by the model because the sock was incorrectly labeled as accessory by the dataset creator. This demonstrates how a model could detect human mistakes. 
+* Regarding the last article that the model has confused, the baby clothes, it could be easily seen that the fact that there are 3 peices of apparel in the picture, instead of one, the model has confused them with innerwear. 
+* Given all the final results, I accepted the initial stated hypothesis:
+  * The gender and article type (both for a masterCategory and subCategory) could be predicted from the article image.
 
 
 
