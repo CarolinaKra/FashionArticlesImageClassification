@@ -15,7 +15,7 @@ I developed a computer vision model for multi-output classification of Fashion A
   2. Set the measure of success
   3. Set an evaluation protocol
   4. Load and prepare the data
-  5. Develope a model that does better than a baseline model
+  5. Develop a model that does better than a baseline model
   6. Develope a model that overfits by scaling up
   7. Tune the hyperparameters, add regularisation and train and test the final model.
 * The data preparation step includes:
@@ -72,11 +72,11 @@ In this step:
 * I converted the labels into one-hot encoding tensors.
 * I split the data into train, validation and test sets
 
-## 5. Develope a model that does better than a baseline model
+## 5. Develop a model that does better than a baseline model
 * First, I created a baseline model using only fully-connected layers. This model achieved an average accuracy of 74.9%
 * Secondly, I created a  basic convolutional layer model with a single convolutional layer, a maxpooling layer, a flatten layer, a single dense layer in addition to the output layers for classification. This model improved the baseline model achieving an average accuracy of 91.6%. The reason for the success is that the CNN models are able to retain graphical patterns from the images, and do not assume that the object is in the same position for every image as the baseline model did.
 
-## 6. Develope a model that overfits by scaling up
+## 6. Develop a model that overfits by scaling up
 I created a model as bellow
 
 ![](https://github.com/CarolinaKra/FashionArticlesImageClassification/blob/main/Images/model.png)
